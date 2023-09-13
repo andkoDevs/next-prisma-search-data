@@ -1,0 +1,1 @@
+# next-prisma-search-data
