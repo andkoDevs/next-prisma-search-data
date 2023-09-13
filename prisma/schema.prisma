@@ -9,10 +9,12 @@ datasource db {
 }
 
 model Post {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    title     String   @unique
-    slug      String   @unique
-    content   String   @db.LongText
+    id             Int      @id @default(autoincrement())
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
+    title          String   @unique
+    slug           String   @unique
+    content        String   @db.LongText
+    excerpt        String?
+    featured_image String?  @db.LongText
 }
