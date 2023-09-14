@@ -6,7 +6,7 @@ const Search = dynamic(() => import('@/components/Search'));
 const SearchResults = dynamic(() => import('@/components/SearchResults'));
 
 async function getData(params: Params) {
-	const res = await fetch(`https://andko-search.vercel.app/api/posts?search=${params?.search ?? ''}`);
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts?search=${params?.search ?? ''}`);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');

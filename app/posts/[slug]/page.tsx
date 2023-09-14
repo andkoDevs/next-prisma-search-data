@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Params } from '@/lib/types';
 
 async function getPost(params: Params) {
-	const res = await fetch(`https://andko-search.vercel.app/api/posts/${params?.slug ?? ''}`);
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${params?.slug ?? ''}`);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
@@ -13,7 +13,7 @@ async function getPost(params: Params) {
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
-	const res = await fetch(`https://andko-search.vercel.app/api/posts/${params?.slug ?? ''}`);
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${params?.slug ?? ''}`);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
