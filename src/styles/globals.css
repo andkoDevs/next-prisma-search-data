@@ -1,3 +1,363 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--syntax-background-color: #08090a;
+	--syntax-text-color: #f8f8f2;
+	--syntax-comment-color: #808080;
+	--syntax-declaration-color: #f39c12;
+	--syntax-literal-color: #dda0dd;
+	--syntax-error-color: #f9690e;
+	--syntax-name-color: #7ed07e;
+	--syntax-string-color: #f2ca27;
+}
+
+.container {
+	max-width: 991px;
+}
+
+header {
+	@apply w-full flex items-center justify-center px-5 py-4 bg-slate-900 sticky z-10 top-0;
+}
+
+p {
+	@apply text-base lg:text-lg text-gray-700 text-left mb-5;
+}
+
+a {
+	@apply text-base lg:text-lg text-blue-500 text-left mb-5 opacity-100 transition-all hover:opacity-75;
+}
+
+ul {
+	@apply list-outside list-disc mx-5 mb-5;
+}
+
+strong {
+	@apply font-semibold;
+}
+
+em {
+	@apply italic;
+}
+
+h1,
+h1 a {
+	@apply text-xl lg:text-4xl font-semibold text-gray-700 my-5 leading-snug lg:leading-snug;
+}
+h2,
+h2 a {
+	@apply text-lg lg:text-3xl font-semibold text-gray-700 my-5 leading-snug lg:leading-snug;
+}
+h3,
+h3 a {
+	@apply text-base lg:text-2xl font-semibold text-gray-700 text-left my-5 leading-snug lg:leading-snug;
+}
+h4,
+h4 a {
+	@apply text-base lg:text-xl font-semibold text-gray-700 text-left my-5 leading-snug lg:leading-snug;
+}
+h5,
+h5 a {
+	@apply text-base lg:text-xl font-semibold text-gray-700 text-left my-5 leading-snug lg:leading-snug;
+}
+h6,
+h6 a {
+	@apply text-base lg:text-xl font-semibold text-gray-700 text-left my-5 leading-snug lg:leading-snug;
+}
+
+code:not(.highlight code) {
+	@apply bg-slate-200 text-gray-700 rounded text-sm px-2 py-1 mx-1;
+}
+
+table {
+	@apply border-collapse w-full border-2 border-slate-300 bg-white text-sm shadow-sm;
+}
+
+table thead {
+	@apply bg-slate-50;
+}
+
+table th {
+	@apply border-2 border-slate-300 font-semibold p-4 text-gray-700 text-left;
+}
+
+table td {
+	@apply border-2 border-slate-300 p-4 text-gray-700;
+}
+
+hr {
+	@apply my-5;
+}
+
+div.highlight {
+	@apply rounded bg-slate-800 mb-5 p-5 text-white overflow-x-auto;
+}
+
+.highlight .c {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .k {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .l {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .n {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .o {
+	@apply text-[var(--syntax-error-color)];
+}
+
+.highlight .p {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .ch {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .cm {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .cp {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .cpf {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .c1 {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .cs {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .gd {
+	@apply text-[var(--syntax-error-color)];
+}
+
+.highlight .ge {
+	@apply italic;
+}
+
+.highlight .gi {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .gu {
+	@apply text-[var(--syntax-comment-color)];
+}
+
+.highlight .kc {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .kd {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .kn {
+	@apply text-[var(--syntax-error-color)];
+}
+
+.highlight .kp {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .kr {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .kt {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .ld {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .m {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .s {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .na {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .nb {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .nc {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .no {
+	@apply text-[var(--syntax-declaration-color)];
+}
+
+.highlight .nd {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .ni {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .ne {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .nf {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .nl {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .nn {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .nx {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .py {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .nt {
+	@apply text-[var(--syntax-error-color)];
+}
+
+.highlight .nv {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .ow {
+	@apply text-[var(--syntax-error-color)];
+}
+
+.highlight .w {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .mb {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .mf {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .mh {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .mi {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .mo {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .sa {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .sb {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .sc {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .dl {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .sd {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .s2 {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .se {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.highlight .sh {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .si {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .sx {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .sr {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .s1 {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .ss {
+	@apply text-[var(--syntax-string-color)];
+}
+
+.highlight .bp {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .fm {
+	@apply text-[var(--syntax-name-color)];
+}
+
+.highlight .vc {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .vg {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .vi {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .vm {
+	@apply text-[var(--syntax-text-color)];
+}
+
+.highlight .il {
+	@apply text-[var(--syntax-literal-color)];
+}
+
+.table-wrapper-paragraph {
+	@apply w-full overflow-x-auto mb-5;
+}

@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { GoSearch } from 'react-icons/go';
+import { Params } from '@/lib/types';
 
-export default function Search({ parameters }: { parameters: { [key: string]: string | string[] | undefined } }) {
+export default function Search({ parameters }: { parameters: Params }) {
 	const router = useRouter();
 	const [value, setValue] = useState(parameters && !!parameters?.search?.length ? parameters?.search : '');
 
@@ -21,7 +22,7 @@ export default function Search({ parameters }: { parameters: { [key: string]: st
 				defaultValue={value}
 				placeholder="Search any title or description of the posts..."
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-				className="border-0 focus:border-0 outline-none rounded-lg w-full px-4 py-3 text-md lg:text-xl text-gray-700 font-semibold"
+				className="border-0 focus:border-0 outline-none rounded-lg w-full px-4 py-3 text-base lg:text-xl text-gray-700 font-semibold"
 			/>
 			<button type="submit" title="Search" className="absolute right-0 text-lg lg:text-3xl text-gray-400 px-2">
 				<GoSearch />

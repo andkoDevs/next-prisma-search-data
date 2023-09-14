@@ -6,3 +6,7 @@ export interface Post {
 	excerpt?: string;
 	featured_image?: string;
 }
+
+export interface Params {
+	[key: string]: string | string[] | undefined;
+}
